@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome to JavaScript</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body id ="body" style="background-color: #faebd7;  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;     font-family: Arial, sans-serif;
+display: flex;
+justify-content: center;
+text-align: center;
+background: linear-gradient(135deg, #faebd7 0%, #9face6 100%);
+color: white;" >
+
+ 
+ </div>
+ 
+
+  <div class="container" style="align-items: center;">
+    <div id="welcome-message"></div>
+
+    <script>
+      const message = "Welcome to JavaScript";
+      let index = 0;
+      const speed = 100; // Delay in milliseconds
+  
+      function typeMessage() {
+        if (index < message.length) {
+          document.getElementById("welcome-message").textContent += message.charAt(index);
+          index++;
+        } else {
+          clearInterval(typingInterval); // Stop the interval when done
+        }
+      }
+  
+      const typingInterval = setInterval(typeMessage, speed);
+    </script>
+  
+    <h1 id="welcome-text" class="fade-in">Welcome to my JavaScript page</h1>
+    <p class="intro-text">Click the buttons below to explore the magic of JavaScript!</p>
+    <button style= "border-radius: 100px;" id="change-text-btn" onclick="changeText()">Click Me to activate JavaScript to next page</button>
+
+    <button style= "border-radius: 100px;" id="change-text-btn" onclick="myMove(), myMoveDown(), myMoveTop()">Click Me to move the two objects</button>
+ 
+
+    <div onclick= "myMove()" style="  width: 100%; height: fit-content; position: relative; background: #faebd7;" id ="container">
+      <div style="  width: 100px; height: 100px; position: absolute; background: #ecddac; margin-top: 100px; border-radius: 10px; text-align: center; margin: 50px; padding: 50px;" id ="animate">Moving 2D object Right</div>
+    </div>
+
+    <div onclick= "myMoveTop()" style="  width: 100%; height: fit-content; position: relative; background: #faebd7;" id ="container">
+      <div style="  width: 100px; height: 100px; position: absolute; background: #1d1809; margin-top: 100px; border-radius: 10px; text-align: center; margin: 50px; padding: 50px;" id ="animateThree">Moving 2D object Left</div>
+    </div>
+
+    <div onclick= "myMoveDown()" style="  width: 100%; height: fit-content; position: relative; background: #faebd7;" id ="container">
+      <div style="  width: 50px; height: 50px; position: absolute; background: #6d5401; margin-top: 100px; border-radius: 1000px; text-align: center; margin: 50px; padding: 50px;" id ="animateTwo">Moving 2D circle</div>
+    </div>
+
+
+  </div>
+
+
+
+
+
+
+
+
+ <script src="script.js"></script>
+</body>
+</html>
